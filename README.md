@@ -22,6 +22,7 @@ Las visualizaciones están disponibles en el archivo `visualizaciones.twbx`.
 #### Los archivos que puedes encontrar en este repositorio son:
 - `instnwnd.sql`: archivo ejecutable para crear y cargar el dataset Northwind.
 - `consultas.sql`: archivo sql con las consultas realizadas.
+- `funcionesyprocedimientos.sql`: archivo sql con funciones y procedimientos (para usuarios más avanzados).
 - `visualizaciones.twbx`: visualizaciones en Tableau.
 - `README.md`: archivo README del repositorio.
 - `src`: carpeta con imágenes del repositorio.
