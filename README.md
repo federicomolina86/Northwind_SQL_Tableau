@@ -13,7 +13,7 @@ El proyecto incluye una serie de consultas SQL que proporcionan información val
 - Análisis de compras.
 - Análisis de clientes.
 - Análisis de empleados.
-Puedes encontrar las consultas SQL utilizadas en el archivo `consultas.sql`.
+Puedes encontrar las consultas SQL utilizadas en el archivo `consultas.sql` y otro archivo llamado `funcionesyprocedimientos.sql` que incluye funciones y preocedimientos (para usuarios más avanzados).
 
 ## Visualizaciones con Tableau
 Se han creado visualizaciones interactivas utilizando Tableau para representar de manera intuitiva los resultados de las consultas SQL. Las visualizaciones incluyen gráficos de barras, gráficos circulares y tableros de resumen para presentar los datos de manera efectiva.
@@ -22,8 +22,9 @@ Las visualizaciones están disponibles en el archivo `visualizaciones.twbx`.
 #### Los archivos que puedes encontrar en este repositorio son:
 - `instnwnd.sql`: archivo ejecutable para crear y cargar el dataset Northwind.
 - `consultas.sql`: archivo sql con las consultas realizadas.
-- `funcionesyprocedimientos.sql`: archivo sql con funciones y procedimientos (para usuarios más avanzados).
+- `funcionesyprocedimientos.sql`: archivo sql con funciones y procedimientos.
 - `visualizaciones.twbx`: visualizaciones en Tableau.
+- `Northwind.xls`: archivo de Excel con los datos que se van a visualizar.
 - `README.md`: archivo README del repositorio.
 - `src`: carpeta con imágenes del repositorio.
 
