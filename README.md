@@ -1,4 +1,4 @@
-# Proyecto Northwind Database Analysis
+# Proyecto Análisis de la Base de Datos Northwind 
 
 ![](https://github.com/federicomolina86/Northwind_SQL_Tableau/blob/main/src/MSQLS.png) ![](https://github.com/federicomolina86/Northwind_SQL_Tableau/blob/main/src/Tableau.jpg)
 
