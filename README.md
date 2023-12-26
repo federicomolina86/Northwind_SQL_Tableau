@@ -13,6 +13,7 @@ El proyecto incluye una serie de consultas SQL que proporcionan información val
 - Análisis de compras.
 - Análisis de clientes.
 - Análisis de empleados.
+
 Puedes encontrar las consultas SQL utilizadas en el archivo `consultas.sql` y otro archivo llamado `funcionesyprocedimientos.sql` que incluye funciones y preocedimientos (para usuarios más avanzados).
 
 ## Visualizaciones con Tableau
