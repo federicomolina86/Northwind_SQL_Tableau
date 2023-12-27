@@ -26,6 +26,7 @@ Las visualizaciones están disponibles en el archivo `visualizaciones.twbx`.
 - `funcionesyprocedimientos.sql`: archivo sql con funciones y procedimientos.
 - `visualizaciones.twbx`: visualizaciones en Tableau.
 - `Northwind.xls`: archivo de Excel con los datos que se van a visualizar.
+- `DER.png`: imagen con el Diagrama de Entidad-Relación
 - `README.md`: archivo README del repositorio.
 - `src`: carpeta con imágenes del repositorio.
 
