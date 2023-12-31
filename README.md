@@ -35,4 +35,5 @@ Las visualizaciones están disponibles en el archivo `visualizaciones.twbx`.
 - `README.md`: archivo README del repositorio.
 - `src`: carpeta con imágenes del repositorio.
 
-![](https://github.com/federicomolina86/Northwind_SQL_Tableau/blob/main/src/Diagram.png)
+![](https://github.com/federicomolina86/Northwind_SQL_Tableau/blob/main/src/visualizaciones.png)
+![](https://github.com/federicomolina86/Northwind_SQL_Tableau/blob/main/DER.png)
