@@ -17,7 +17,11 @@ El proyecto incluye una serie de consultas SQL que proporcionan información val
 Puedes encontrar las consultas SQL utilizadas en el archivo `consultas.sql` y otro archivo llamado `funcionesyprocedimientos.sql` que incluye funciones y preocedimientos (para usuarios más avanzados).
 
 ## Visualizaciones con Tableau
-Se han creado visualizaciones interactivas utilizando Tableau para representar de manera intuitiva los resultados de las consultas SQL. Las visualizaciones incluyen gráficos de barras, gráficos circulares y tableros de resumen para presentar los datos de manera efectiva.
+Se han creado visualizaciones interactivas utilizando Tableau para representar de manera intuitiva los resultados de las consultas SQL. Las visualizaciones incluyen:
+- Mapa que muestra ventas por país.
+- Gráfico de barras horizontales que muestra las ventas por país y por año.
+- Gráfico de burbujas con ventas por categoría (en %).
+- Gráfico combinado de líneas y de barras que muestra la cantidad de productos vendidos y la ganancia obtenida respectivamente por mes.
 Las visualizaciones están disponibles en el archivo `visualizaciones.twbx`.
 
 #### Los archivos que puedes encontrar en este repositorio son:
