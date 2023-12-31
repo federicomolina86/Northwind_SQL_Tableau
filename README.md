@@ -22,6 +22,7 @@ Se han creado visualizaciones interactivas utilizando Tableau para representar d
 - Gráfico de barras horizontales que muestra las ventas por país y por año.
 - Gráfico de burbujas con ventas por categoría (en %).
 - Gráfico combinado de líneas y de barras que muestra la cantidad de productos vendidos y la ganancia obtenida respectivamente por mes.
+
 Las visualizaciones están disponibles en el archivo `visualizaciones.twbx`.
 
 #### Los archivos que puedes encontrar en este repositorio son:
