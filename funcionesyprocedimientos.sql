@@ -1,5 +1,5 @@
-En este archivo se incluyen las 14 consultas realizadas, 7 como funciones y 7 como procedimientos almacenados.
-Las funciones permiten ejecutar cada consulta como una función independiente y llamarlas según sea necesario.
+-- En este archivo se incluyen las 14 consultas realizadas, 7 como funciones y 7 como procedimientos almacenados.
+-- Las funciones permiten ejecutar cada consulta como una función independiente y llamarlas según sea necesario.
 
 - Función 1: Top 7 de productos comprados
 CREATE FUNCTION dbo.TopProductsSold()
@@ -108,3 +108,20 @@ RETURN
     GROUP BY c.CompanyName
     ORDER BY Venta DESC
 )
+
+-- Los procedimientos almacenados son conjuntos de instrucciones SQL que se almacenan en la base de datos y se pueden ejecutar con un nombre específico. 
+-- Son como scripts o funciones predefinidas que realizan una serie de operaciones o consultas en la base de datos.
+
+- Procedimiento 1: Clientes con ventas por encima del promedio en 2018
+CREATE PROCEDURE SP_ClientesVentasPorEncimaPromedio
+AS
+BEGIN
+    SELECT c.CompanyName AS [Nombre de la Compañía], SUM(od.Quantity*od.UnitPrice) AS Venta
+    FROM customers AS c
+    INNER JOIN [Orders] AS o ON c.customerID = o.CustomerID
+    INNER JOIN [Order Details] AS od ON o.OrderID = od.OrderID
+    WHERE YEAR(o.OrderDate) = '2018'
+    GROUP BY c.CompanyName
+    HAVING SUM(od.Quantity*od.UnitPrice) > (SELECT AVG(Quantity*UnitPrice) FROM [Order Details])
+    ORDER BY Venta DESC
+END
