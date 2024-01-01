@@ -1,3 +1,6 @@
+En este archivo se incluyen las 14 consultas realizadas, 7 como funciones y 7 como procedimientos almacenados.
+Las funciones permiten ejecutar cada consulta como una función independiente y llamarlas según sea necesario.
+
 - Función 1: Top 7 de productos comprados
 CREATE FUNCTION dbo.TopProductsSold()
 RETURNS TABLE
