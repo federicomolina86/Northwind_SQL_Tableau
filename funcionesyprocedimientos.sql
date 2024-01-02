@@ -125,3 +125,80 @@ BEGIN
     HAVING SUM(od.Quantity*od.UnitPrice) > (SELECT AVG(Quantity*UnitPrice) FROM [Order Details])
     ORDER BY Venta DESC
 END
+
+-- Procedimiento 2: Clientes que no han comprado en los últimos 80 meses
+CREATE PROCEDURE SP_ClientesSinComprasUltimos80Meses
+AS
+BEGIN
+    SELECT c.CompanyName AS [Nombre de la Compañía], MAX(o.orderDate) AS [Última compra],
+    DATEDIFF(month, MAX(o.OrderDate), GETDATE()) AS [Meses sin comprar]
+    FROM customers AS c
+    INNER JOIN Orders AS o ON o.CustomerID = c.CustomerID
+    GROUP BY c.CompanyName
+    HAVING DATEDIFF(month, MAX(o.OrderDate), GETDATE()) > 80
+    ORDER BY o.OrderDate DESC
+END
+
+-- Procedimiento 3: Número de órdenes por clientes
+CREATE PROCEDURE SP_NumeroOrdenesPorCliente
+AS
+BEGIN
+    SELECT c.CompanyName AS [Nombre de la Compañía],
+    (SELECT COUNT(o.orderID) FROM Orders AS o WHERE c.CustomerID = o.CustomerID) AS [Órdenes]
+    FROM Customers AS c
+    ORDER BY [Órdenes] DESC
+END
+
+-- Procedimiento 4: Empleados con más ventas y bonos
+CREATE PROCEDURE SP_EmpleadosMasVentas
+AS
+BEGIN
+    SELECT TOP 5 e.FirstName + ' ' + e.LastName AS [Nombre Completo],
+    SUM(od.Quantity*od.UnitPrice) AS Venta,
+    SUM((od.Quantity*od.UnitPrice)*0.02) AS Bonus,
+    SUM(od.Quantity * od.UnitPrice) + SUM((od.Quantity * od.UnitPrice) * 0.02) AS Total
+    FROM Employees AS e
+    INNER JOIN Orders AS o ON o.EmployeeID = e.EmployeeID
+    INNER JOIN [Order Details] AS od ON od.OrderID = o.OrderID
+    GROUP BY e.FirstName + ' ' + e.LastName
+    ORDER BY [Venta] DESC
+END
+
+-- Procedimiento 5: Cantidad de empleados por posición y ciudad
+CREATE PROCEDURE SP_CantidadEmpleadosPorPosicionCiudad
+AS
+BEGIN
+    SELECT title AS Puesto, city AS Ciudad, COUNT(employeeID) AS Empleados
+    FROM employees
+    GROUP BY title, city
+END
+
+-- Procedimiento 5: Cantidad de empleados por posición y ciudad
+
+CREATE PROCEDURE SP_CantidadEmpleadosPorPosicionCiudad
+AS
+BEGIN
+    SELECT title AS Puesto, city AS Ciudad, COUNT(employeeID) AS Empleados
+    FROM employees
+    GROUP BY title, city
+END
+
+-- Procedimiento 6: Tiempo de trabajo de empleados
+CREATE PROCEDURE SP_TiempoTrabajoEmpleados
+AS
+BEGIN
+    SELECT FirstName + ' ' + LastName AS [Nombre Completo],
+    DATEDIFF(YEAR, HireDate, GETDATE()) AS [Años trabajando]
+    FROM Employees
+END
+
+-- Procedimiento 7: Empleados mayores de 70 años
+CREATE PROCEDURE SP_EmpleadosMayores70Anios
+AS
+BEGIN
+    SELECT FirstName + ' ' + LastName AS [Nombre Completo],
+    DATEDIFF(YEAR, BirthDate, GETDATE()) AS [Edad]
+    FROM employees
+    WHERE DATEDIFF(YEAR, BirthDate, GETDATE()) > 70
+    ORDER BY Edad DESC
+END
