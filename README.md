@@ -25,6 +25,8 @@ Se han creado visualizaciones interactivas utilizando Tableau para representar d
 
 Las visualizaciones están disponibles en el archivo `visualizaciones.twbx`.
 
+## Insights obtenidos del análisis
+
 #### Los archivos que puedes encontrar en este repositorio son:
 - `instnwnd.sql`: archivo ejecutable para crear y cargar el dataset Northwind.
 - `consultas.sql`: archivo sql con las consultas realizadas.
