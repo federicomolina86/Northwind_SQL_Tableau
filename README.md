@@ -28,7 +28,9 @@ Las visualizaciones están disponibles en el archivo `visualizaciones.twbx`.
 ## Insights obtenidos del análisis
 - Estados Unidos y Alemania son los países que representan la mayor cantidad de ventas.
 - Las categorías de productos más vendidas son "bebidas" y "productos de uso diario".
-- 
+- Las de menos ventas son "condimentos" y "cereales". Se recomienda fortalecer las estrategias de marketing en este tipo de productos.
+- Las mayores ventas se registran durante los meses de enero a abril.
+- Las menores fueron de mayo a septiembre. Se aconseja el uso de promociones u otras estrategias de venta.
 
 #### Los archivos que puedes encontrar en este repositorio son:
 - `instnwnd.sql`: archivo ejecutable para crear y cargar el dataset Northwind.
