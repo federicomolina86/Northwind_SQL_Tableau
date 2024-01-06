@@ -26,6 +26,9 @@ Se han creado visualizaciones interactivas utilizando Tableau para representar d
 Las visualizaciones están disponibles en el archivo `visualizaciones.twbx`.
 
 ## Insights obtenidos del análisis
+- Estados Unidos y Alemania son los países que representan la mayor cantidad de ventas.
+- Las categorías de productos más vendidas son "bebidas" y "productos de uso diario".
+- 
 
 #### Los archivos que puedes encontrar en este repositorio son:
 - `instnwnd.sql`: archivo ejecutable para crear y cargar el dataset Northwind.
